@@ -194,15 +194,6 @@ Users can define custom gestures with advanced features:
 - **Performance Monitoring**: Continuous model performance tracking and optimization
 
 
-## 🔮 Future Roadmap
-
-### Version 2.0 Features
-- **Multi-hand Gesture Recognition**: Support for both hands simultaneously
-- **3D Gesture Tracking**: Depth-based gesture recognition
-- **Edge Computing**: On-device AI processing
-- **Mobile Support**: iOS and Android applications
-- **IoT Integration**: Smart home gesture control
-
 **⭐ Star this repository if you find it helpful!**
 
 **🔄 Fork and contribute to make it even better!**
