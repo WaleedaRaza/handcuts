@@ -63,9 +63,7 @@ HandCuts is a sophisticated hand gesture recognition application that leverages 
 
 #### 2. Machine Learning Engine
 - **CNN-LSTM Hybrid Model**: Custom deep learning architecture for temporal gesture recognition
-- **Custom Dataset Training**: 50,000+ hand gesture samples across diverse lighting conditions
 - **Transfer Learning**: Pre-trained models fine-tuned for gesture recognition
-- **Online Learning**: Real-time model updates based on user feedback
 - **Attention Mechanisms**: Self-attention layers for improved temporal modeling
 - **Adversarial Training**: Robust model training against adversarial examples
 
@@ -73,9 +71,7 @@ HandCuts is a sophisticated hand gesture recognition application that leverages 
 - **Ensemble Methods**: scikit-learn SGD classifier and XGBoost integration
 - **Confidence Scoring**: Multi-model voting for robust predictions
 - **Graceful Degradation**: Automatic fallback to simpler recognition methods
-- **Error Recovery**: Self-healing system for improved reliability
 - **Dynamic Thresholding**: Adaptive confidence thresholds based on environmental conditions
-- **Multi-Modal Fusion**: Integration of visual and audio cues
 
 #### 4. User Interface
 - **Real-time Feedback**: Tkinter-based visualization with gesture overlay
@@ -94,13 +90,6 @@ HandCuts is a sophisticated hand gesture recognition application that leverages 
 - **Process Management**: Intelligent resource allocation and optimization
 
 ## 🛠️ Installation
-
-### Prerequisites
-- Python 3.8 or higher
-- macOS 10.15+ (optimized for macOS)
-- Webcam with 720p+ resolution
-- 4GB+ RAM recommended
-- CUDA-compatible GPU (optional, for enhanced performance)
 
 ### Dependencies
 
@@ -157,96 +146,6 @@ python handcut.py
 3. **Perform Gestures**: Use the gesture library to control your Mac
 4. **Monitor Feedback**: Watch the real-time gesture recognition display
 
-### Advanced Features
-
-#### User Calibration
-```bash
-# Run calibration mode
-python handcut.py --calibrate
-
-# This will guide you through:
-# - Lighting condition optimization
-# - Gesture personalization
-# - Accuracy threshold tuning
-# - Custom gesture mapping
-# - Environmental adaptation
-# - Performance benchmarking
-```
-
-#### Custom Gesture Training
-```bash
-# Train custom gestures
-python train_gestures.py --dataset path/to/gestures --epochs 100
-
-# The system will:
-# - Collect your gesture samples
-# - Train a personalized model
-# - Integrate with existing pipeline
-# - Validate gesture uniqueness
-# - Optimize recognition parameters
-```
-
-#### Speech Fallback Mode
-```bash
-# Enable voice commands
-python handcut.py --speech-fallback
-
-# Available voice commands:
-# - "copy that" - Copy selected content
-# - "paste here" - Paste content
-# - "select all" - Select all content
-# - "switch desktop" - Change desktop
-# - "open browser" - Launch web browser
-# - "close window" - Close active window
-```
-
-#### Research Mode
-```bash
-# Enable research and analytics mode
-python handcut.py --research-mode
-
-# Features:
-# - Detailed gesture analytics
-# - Performance benchmarking
-# - Model evaluation metrics
-# - User behavior analysis
-# - System optimization recommendations
-```
-
-## 📊 Performance Metrics
-
-### Recognition Accuracy
-- **Standard Gestures**: 98.7% accuracy across diverse conditions
-- **Custom Gestures**: 95.2% accuracy with user calibration
-- **Fallback System**: 92.1% accuracy under challenging conditions
-- **Temporal Gestures**: 94.8% accuracy for complex sequences
-- **Multi-Modal**: 96.3% accuracy with speech integration
-
-### Latency Performance
-- **Gesture Detection**: <50ms end-to-end latency
-- **Action Execution**: <100ms system response time
-- **Model Inference**: <30ms per frame processing
-- **UI Update**: <16ms refresh rate
-- **Network Communication**: <10ms local server response
-
-### System Requirements
-- **CPU**: Intel i5 or equivalent (2.5GHz+)
-- **RAM**: 4GB minimum, 8GB recommended
-- **GPU**: Optional CUDA support for enhanced performance
-- **Storage**: 500MB for models and datasets
-- **Network**: Local network for distributed processing
-
-## 🔧 Configuration
-
-### Advanced Settings
-
-The system uses a comprehensive configuration system that allows fine-tuning of all parameters:
-
-- **Detection Parameters**: Confidence thresholds, tracking settings, gesture recognition sensitivity
-- **Machine Learning Parameters**: Model confidence thresholds, ensemble voting weights, online learning rates
-- **Performance Tuning**: Frame processing rates, gesture history sizes, adaptive thresholds
-- **Advanced Features**: Temporal window sizes, attention mechanisms, multi-modal fusion settings
-
 ### Custom Gesture Mapping
 
 Users can define custom gestures with advanced features:
@@ -260,7 +159,7 @@ Users can define custom gestures with advanced features:
 
 ### Model Architecture
 
-The system employs a sophisticated **CNN-LSTM Hybrid with Attention** architecture:
+ **CNN-LSTM Hybrid with Attention** architecture:
 
 - **Spatial Feature Extraction**: CNN layers with batch normalization for robust feature learning
 - **Temporal Modeling**: LSTM layers with dropout for sequence understanding
@@ -270,26 +169,15 @@ The system employs a sophisticated **CNN-LSTM Hybrid with Attention** architectu
 
 ### Training Pipeline
 
-#### Data Collection and Preprocessing
-- **Custom Dataset**: 50,000+ hand gesture samples across diverse conditions
 - **Data Augmentation**: Real-time augmentation with brightness, contrast, rotation, and noise
 - **Sequence Processing**: Temporal window management for gesture sequences
 - **Validation Strategy**: 80/20 train-test split with cross-validation
-
-#### Training Process
-The training pipeline supports advanced features:
-
 - **Distributed Training**: Multi-GPU training for faster convergence
-- **Mixed Precision**: FP16 training for memory efficiency
 - **Gradient Clipping**: Stable training with gradient norm clipping
 - **Learning Rate Scheduling**: Cosine annealing for optimal convergence
 - **Transfer Learning**: Pre-trained model fine-tuning for rapid adaptation
 
 ## 🔄 Fallback System
-
-### Ensemble Methods
-
-The system uses a sophisticated ensemble approach with 6 different models:
 
 - **CNN-LSTM Model**: Primary deep learning model for gesture recognition
 - **SGD Classifier**: Fast linear model for real-time predictions
@@ -300,209 +188,23 @@ The system uses a sophisticated ensemble approach with 6 different models:
 
 ### Confidence Scoring and Error Recovery
 
-The system implements intelligent confidence management:
-
 - **Dynamic Thresholding**: Adaptive confidence thresholds based on environmental conditions
 - **Temporal Smoothing**: Historical confidence analysis for stable predictions
 - **Error Recovery**: Automatic fallback strategies for model failures
 - **Performance Monitoring**: Continuous model performance tracking and optimization
 
-## 🌐 Web Integration
-
-### Flask Server Architecture
-
-The system includes a comprehensive web interface:
-
-- **Real-time Communication**: WebSocket-based gesture streaming
-- **RESTful API**: Standard HTTP endpoints for external integrations
-- **Session Management**: Multi-user support with individual session tracking
-- **Analytics Dashboard**: Real-time performance monitoring and visualization
-- **Background Processing**: Asynchronous gesture processing for improved performance
-
-### Dashboard Features
-
-The web dashboard provides comprehensive monitoring:
-
-- **Real-time Metrics**: Live accuracy, latency, and gesture count displays
-- **Performance Charts**: Historical performance visualization
-- **Gesture Feed**: Live stream of detected gestures and actions
-- **System Analytics**: Comprehensive performance analytics and insights
-
-## 📈 Performance Optimization
-
-### Real-time Processing Pipeline
-
-The system implements advanced optimization techniques:
-
-- **GPU Acceleration**: CUDA support for faster inference
-- **Mixed Precision**: FP16 operations for memory efficiency
-- **Batch Processing**: Efficient batch inference for multiple frames
-- **Memory Management**: Intelligent cache management and garbage collection
-- **Multi-threading**: Parallel processing for improved throughput
-
-### Advanced Optimizations
-
-- **Frame Buffer Management**: Efficient frame buffering for temporal processing
-- **Model Quantization**: Optimized model sizes for faster inference
-- **Dynamic Batch Sizing**: Adaptive batch sizes based on system load
-- **Cache Optimization**: Intelligent caching for frequently used operations
-
-## 🎓 Academic Impact
-
-### Educational Use
-- **Downloaded by 267+ students** in the George Mason CS department
-- **Used in Computer Vision lab demonstrations**
-- **Featured in machine learning coursework**
-- **Research applications in HCI and accessibility**
-- **Cited in 3 academic papers** on gesture recognition
-- **Integrated into CS 471: Computer Vision curriculum**
-
-### Research Contributions
-- **Novel CNN-LSTM architecture** for temporal gesture recognition
-- **Ensemble methods** for robust gesture classification
-- **Real-time learning** in computer vision applications
-- **Accessibility applications** for hands-free computing
-- **Multi-modal fusion** techniques for improved accuracy
-- **Temporal attention mechanisms** for sequence modeling
-
-### Publications and Citations
-```bibtex
-@article{raza2023handcuts,
-  title={HandCuts: Advanced Hand Gesture Recognition for Desktop Automation},
-  author={Raza, Waleed},
-  journal={Computer Vision and Pattern Recognition},
-  year={2023},
-  volume={1},
-  pages={1--15}
-}
-
-@inproceedings{raza2023ensemble,
-  title={Ensemble Methods for Robust Hand Gesture Recognition},
-  author={Raza, Waleed and Smith, John},
-  booktitle={Proceedings of the IEEE Conference on Computer Vision},
-  year={2023},
-  pages={1234--1243}
-}
-```
-
-## 🤝 Contributing
-
-We welcome contributions from the community! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-```bash
-# Clone the repository
-git clone https://github.com/WaleedaRaza/handcuts.git
-cd handcuts
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-python -m pytest tests/
-
-# Run linting
-flake8 handcuts/
-
-# Run type checking
-mypy handcuts/
-
-# Run security checks
-bandit -r handcuts/
-```
-
-### Code Style and Standards
-- **PEP 8**: Python code style guidelines
-- **Type Hints**: Comprehensive type annotations
-- **Documentation**: Detailed docstrings and comments
-- **Testing**: Comprehensive test coverage (>90%)
-- **Security**: Regular security audits and vulnerability scanning
-- **Performance**: Continuous performance monitoring and optimization
-
-### Development Workflow
-```bash
-# Create feature branch
-git checkout -b feature/advanced-gesture-recognition
-
-# Make changes and test
-python -m pytest tests/ -v
-python -m mypy handcuts/
-python -m flake8 handcuts/
-
-# Commit with conventional commits
-git commit -m "feat: add temporal attention mechanism for gesture recognition"
-
-# Push and create pull request
-git push origin feature/advanced-gesture-recognition
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Waleed Raza**
-- Email: Waleedraza1211@gmail.com
-- GitHub: [@WaleedaRaza](https://github.com/WaleedaRaza)
-- LinkedIn: [Waleed Raza](https://linkedin.com/in/waleedraza)
-- Research Gate: [Waleed Raza](https://researchgate.net/profile/waleed-raza)
-- Google Scholar: [Waleed Raza](https://scholar.google.com/citations?user=waleedraza)
-
-## 🙏 Acknowledgments
-
-- **MediaPipe**: Advanced hand tracking and pose estimation
-- **OpenCV**: Computer vision framework
-- **PyTorch**: Deep learning framework
-- **TensorFlow**: Machine learning platform
-- **George Mason University**: Academic support and testing
-- **Open Source Community**: Contributors and feedback
-- **Computer Vision Research Group**: Technical guidance and mentorship
-- **Accessibility Research Lab**: User testing and feedback
-
-## 📊 Statistics
-
-- **Downloads**: 267+ students in GMU CS department
-- **Accuracy**: 98.7% gesture recognition accuracy
-- **Latency**: <50ms end-to-end processing
-- **Languages**: Python, JavaScript, HTML/CSS, TypeScript
-- **Frameworks**: 8+ major ML/CV frameworks
-- **Contributors**: Active development community
-- **Research Papers**: 3 academic publications
-- **Citations**: 15+ academic citations
-- **Conference Presentations**: 2 major CV conferences
-- **Industry Applications**: 5+ commercial integrations
 
 ## 🔮 Future Roadmap
 
 ### Version 2.0 Features
 - **Multi-hand Gesture Recognition**: Support for both hands simultaneously
 - **3D Gesture Tracking**: Depth-based gesture recognition
-- **Emotion Recognition**: Gesture-based emotion detection
-- **AR/VR Integration**: Virtual reality gesture control
-- **Cloud Processing**: Distributed gesture recognition
 - **Edge Computing**: On-device AI processing
 - **Mobile Support**: iOS and Android applications
 - **IoT Integration**: Smart home gesture control
-
-### Research Directions
-- **Federated Learning**: Privacy-preserving gesture learning
-- **Few-shot Learning**: Rapid gesture adaptation
-- **Cross-cultural Gestures**: Universal gesture recognition
-- **Accessibility Features**: Enhanced accessibility support
-- **Medical Applications**: Healthcare gesture recognition
-- **Robotics Integration**: Robot control via gestures
-
----
 
 **⭐ Star this repository if you find it helpful!**
 
 **🔄 Fork and contribute to make it even better!**
 
 **📧 Contact for collaboration opportunities!**
-
-**🎓 Perfect for computer vision research and education!**
